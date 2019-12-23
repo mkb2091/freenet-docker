@@ -5,4 +5,5 @@ COPY Freenet /Freenet
 RUN useradd freenet
 RUN chown freenet:freenet /Freenet -R
 USER freenet
-CMD /bin/bash
+WORKDIR "/Freenet"
+CMD ./run.sh console
